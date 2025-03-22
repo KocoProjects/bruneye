@@ -1,0 +1,2 @@
+/Volumes/backsy/projects/bruneye/android/app/.cxx/Debug/3h14505e/x86/CMakeFiles/edit_cache.dir
+/Volumes/backsy/projects/bruneye/android/app/.cxx/Debug/3h14505e/x86/CMakeFiles/rebuild_cache.dir

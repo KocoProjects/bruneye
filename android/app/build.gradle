@@ -1,0 +1,47 @@
+
+plugins {
+
+
+    id "com.android.application"
+    id "org.jetbrains.kotlin.android"
+    id "dev.flutter.flutter-gradle-plugin" // This is the correct way
+}
+def flutterVersionCode = project.findProperty('flutterVersionCode') ?: 1
+def flutterVersionName = project.findProperty('flutterVersionName') ?: "1.0"
+
+flutter {
+    source '../..'
+}
+
+android {
+    namespace "com.jessy.bruneye" // This is correct
+    compileSdkVersion flutter.compileSdkVersion
+    ndkVersion flutter.ndkVersion
+
+    compileOptions {
+        sourceCompatibility JavaVersion.VERSION_11
+        targetCompatibility JavaVersion.VERSION_11
+    }
+
+    kotlinOptions {
+        jvmTarget = '11'
+    }
+
+    defaultConfig {
+        applicationId "com.jessy.bruneye" // This is correct
+        minSdkVersion flutter.minSdkVersion // Use flutter.minSdkVersion
+        targetSdkVersion flutter.targetSdkVersion
+        versionCode flutterVersionCode.toInteger()
+        versionName flutterVersionName
+    }
+
+    buildTypes {
+        release {
+            signingConfig signingConfigs.debug // Or your release signing config
+        }
+    }
+}
+
+dependencies {
+    implementation "org.jetbrains.kotlin:kotlin-stdlib-jdk7:$kotlin_version" // Might not be needed
+}

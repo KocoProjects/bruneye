@@ -1,0 +1,29 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 400">
+  <!-- Simple circular background -->
+  <circle cx="200" cy="200" r="160" fill="#f8f8f8" stroke="#3a6ea5" stroke-width="3"/>
+  
+  <!-- Simplified eye -->
+  <path d="M100,200 C100,160 150,120 200,120 C250,120 300,160 300,200 C300,240 250,280 200,280 C150,280 100,240 100,200 Z" 
+        fill="white" stroke="#2c3e50" stroke-width="3"/>
+  
+  <!-- Simple iris -->
+  <circle cx="200" cy="200" r="50" fill="#3a6ea5"/>
+  
+  <!-- Simple pupil -->
+  <circle cx="200" cy="200" r="25" fill="#0f2c4d"/>
+  
+  <!-- Light reflection -->
+  <circle cx="185" cy="185" r="8" fill="white"/>
+  
+  <!-- Open book on top of eye -->
+  <path d="M160,120 L200,95 L240,120" fill="none" stroke="#2c3e50" stroke-width="3"/>
+  
+  <!-- Simple book binding -->
+  <line x1="200" y1="95" x2="200" y2="115" stroke="#2c3e50" stroke-width="3"/>
+  
+  <!-- Graduation cap at bottom -->
+  <path d="M160,280 L200,300 L240,280" fill="none" stroke="#2c3e50" stroke-width="3"/>
+  
+  <!-- Simple glasses frame -->
+  <path d="M100,190 L300,190" stroke="#2c3e50" stroke-width="2" stroke-dasharray="5,3"/>
+</svg>
