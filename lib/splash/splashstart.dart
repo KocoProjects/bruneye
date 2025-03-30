@@ -58,6 +58,7 @@ class _SplashStartState extends State<SplashStart> with SingleTickerProviderStat
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      // Set the background color of the splash screen
       backgroundColor: Colors.white,
       body: Center(
         child: FadeTransition(
@@ -66,6 +67,7 @@ class _SplashStartState extends State<SplashStart> with SingleTickerProviderStat
             mainAxisAlignment: MainAxisAlignment.center,
             children: [
              Text(
+               // App name
             'brunEYE',
               style: GoogleFonts.brunoAceSc(
               fontSize: 24,
@@ -73,6 +75,7 @@ class _SplashStartState extends State<SplashStart> with SingleTickerProviderStat
               color: Theme.of(context).primaryColor,
               ),
              ),
+              // logo
               SvgPicture.asset(
                 'assets/eye-studying-logo.svg',
                 width: 150,
@@ -80,7 +83,7 @@ class _SplashStartState extends State<SplashStart> with SingleTickerProviderStat
               ),
 
               const SizedBox(height: 24),
-              // App name or loading indicator
+              // loading indicator
               const CircularProgressIndicator(),
             ],
           ),

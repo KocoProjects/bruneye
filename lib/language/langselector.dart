@@ -1,9 +1,7 @@
 import 'package:flutter/material.dart';
+import 'package:bruneye/service/languageservice.dart';
 
-// Import from the integrated service
-import '../card/cardservice.dart';
-import '../card/cardslider.dart';
-
+// This widget allows users to select a language from a list of available languages.
 class LanguageSelectorScreen extends StatefulWidget {
   final Function? onLanguageChanged;
 
@@ -14,6 +12,7 @@ class LanguageSelectorScreen extends StatefulWidget {
 }
 
 class _LanguageSelectorScreenState extends State<LanguageSelectorScreen> {
+  // Initialize the language service to manage language preferences
   final _languageService = LanguageService();
   late String _selectedLanguage;
   bool _isLoading = true;
@@ -31,7 +30,7 @@ class _LanguageSelectorScreenState extends State<LanguageSelectorScreen> {
       _isLoading = false;
     });
   }
-
+  // Change the language and update the state
   Future<void> _changeLanguage(String languageCode) async {
     setState(() {
       _isLoading = true;
@@ -53,6 +52,7 @@ class _LanguageSelectorScreenState extends State<LanguageSelectorScreen> {
     if (mounted) {
       ScaffoldMessenger.of(context).showSnackBar(
         SnackBar(
+          // Display a message to confirm the language change
           content: Text('Language changed to ${_languageService.languages[languageCode]}'),
           duration: const Duration(seconds: 2),
         ),
